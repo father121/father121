@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+        /* #memo{
+    color: aqua;
+    font-size: large;
+} */
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Here is the javascript codes</h1>
+    <p id="memo">Wait for a few second loading........</p>
+    <button type="button" onclick ='document.getElementById("memo").innerHTML = "something went wrong!"'>Click
+        here!</button>
+    1 <button type="button" onclick='document.getElementById("memo").innerHTML = "Hello JavaScript!"'>Click Me!</button> -->
+    <h2>its time to chane the image</h2>
+
+    2<!-- <button type="button" onclick="document.getElementById('img1').src= 'img/house-1.jpeg' ">previous</button> -->
+
+    <img id="img1" src="img/house-2.jpeg" alt="" style="width: 200px;"
+        onclick="document.getElementById('img1').src= 'img/house-1.jpeg'">
+    <img id="img1" src="" alt="" style="width: 200px;"
+        onclick="document.getElementById('img1').src= 'img/house-2.jpeg'">
+    3<!-- <button type="button" onclick="document.getElementById('img1').src= 'img/house-2.jpeg' ">Next</button> -->
+
+    4<!-- <button type="button" onclick="document.getElementById('img1').src= 'img/house-3.jpeg' ">asd</button> -->
+    <p id="one">this tis the code to change fontsize with javacsript</p>
+
+
+    5<!-- font-size incease -->
+    <button type="button" onclick=" document.getElementById('one').style.fontSize='50px' ">increase font-size</button>
+
+
+    <p id="three">here ias the codes to remove text</p>
+    <br>
+    <br>
+    6<!-- display  remover -->
+    <button type="button" onclick=" document.getElementById('three,one').style.display='none' ">remove display</button>
+
+    7<!-- add text -->
+    <h2>there is somethis to add here</h2>
+    <p id="two" style="display:none ;">suprise here i am!</p>
+    <button type="button" onclick="document.getElementById('two').style.display= 'block'">suprise</button>
+
+    8<!-- ouside file -->
+    <p id="four">here is my name</p>
+    <button type="button" onclick="mynew1()">ahgdsvaud</button>
+    <script src="/Users/tushar/Desktop/HTML PROJECTS/nexter/javascipt.js">
+
+// maths  
+
+    </script>
+    <p id="five"></p>
+    <button type="button" onclick="myold()"
+        style="border-radius: 40px ; color: white; background-color: blueviolet; padding: 20px;font-size: larger;">enter
+        here to get number</button>
+
+
+    9<!-- without button  -->
+
+    <p id="six"></p>
+    <script>
+        document.getElementById('six').innerHTML = (20 + 15 - 6 / 2) * 10
+
+    </script>
+    10<!-- string and variable -->
+    <p id="seven"></p>
+    <script>
+
+        var company = "microsoft";
+        var company;
+        document.getElementById('seven').innerHTML = company;
+    </script>
+
+    11<!-- after maths  -->
+
+    <p id="eight"></p>
+    <script>
+        let d = "10" + 12 + 42;
+        document.getElementById('eight').innerHTML = d;
+    </script>
+
+    12<!-- before maths  -->
+
+    <p id="nine"></p>
+    <script>
+        let s = 10 + 12 + "42";
+        document.getElementById('nine').innerHTML = s;
+    </script>
+
+    13<!-- decimals -->
+    <p id="ten"></p>
+    <script>
+        const dec = 12.232;
+        var text = "house no.";
+        document.getElementById('ten').innerHTML = text + dec;
+    // var takes last digit
+
+    </script>
+
+    <p id="ero"></p>
+    <script>
+        let u = 12;
+        let q = 23;
+        document.getElementById('ero').innerHTML = q;
+
+    </script>
+    14<!-- let connot be use with used variable or name or id or or class  -->
+
+
+    <p>let cannot used with existing variable</p>
+    <p id="zero"></p>
+    <script>
+        try {
+            v = "name";
+            let v = 12;
+            document.getElementById('zero').innerHTML = v;
+
+        } catch (error) {
+            document.getElementById('zero').innerHTML = error;;
+
+            // console.log(error);
+        }
+
+    </script>
+    <hr>
+    15<!-- const can be used as:-  -->
+    <p id="zer">kbj</p>
+    <p id="er"></p>
+    <script>
+        // numerical
+        try {
+            const num = 1123.1231231;
+            num = 1123.1231231;
+            document.getElementById('zer').innerHTML = num;
+
+        } catch (error) {
+
+            document.getElementById('zer').innerHTML = error;
+        }
+    </script>
+    <p id="tay">
+        <script>
+            houseno = ["one", "two", "three", "four", "five"]
+            houseno[0] = "ten";
+            houseno.push("six")
+
+            document.getElementById('tay').innerHTML = houseno
+        </script>
+    </p>
+    16<!-- object adding also change the property of objects -->
+    <p id="qwerty" style="font-size: 40px;"></p>
+    <script>
+        const phone = { type: "samrtphone", model: "iphone13", color: "gold", storage: "1TB", charger: "20W" }
+        // change the property of any array element 
+        phone.type = "mobile";
+        phone.color = "pacific blue";
+        // add property
+        phone.serialnumber = 2.167534123946125347125;
+        // print 
+        document.getElementById("qwerty").innerHTML = "specifications\t" + phone.model + "\n" + phone.color + " HARDWARE " + phone.serialnumber + "\t" + phone.charger + "\t" + phone.storage;
+
+    </script>
+    17<!-- <script>const x = 2;     // Allowed
+    x = 2;           // Not allowed
+    var x = 2;       // Not allowed
+    let x = 2;       // Not allowed
+    const x = 2;     // Not allowed
+    
+    {
+      const x = 2;   // Allowed
+      x = 2;         // Not allowed
+      var x = 2;     // Not allowed
+      let x = 2;     // Not allowed
+      const x = 2;   // Not allowed
+    }</script> -->
+
+
+    18<!-- for square of any number  -->
+    <p id="sqr"></p>
+    <P id="sqr2"></P>
+    <p id="sqr3"></p>
+    <p id="cube"></p>
+    <script>
+        // first 
+        let x = 12;
+        let sqr = x ** 2;
+        document.getElementById("sqr").innerHTML = sqr;
+//   second 
+let sec = 6;
+let sqr2 = Math.pow(sec,2);
+document.getElementById('sqr2').innerHTML = sqr2;
+// third 
+let thr = 7;
+thr **= 2;
+document.getElementById('sqr3').innerHTML = thr;
+// for cube and so on.......
+let c = 5;
+let cube = c ** 3;
+document.getElementById('cube').innerHTML = cube;
+    </script>
+    19<!-- to check the thing is inmcluded or not  -->
+    <h3>if pen is written inarray = true / if pen is not wriiten =  false</h3>
+    <p id="pn"></p>
+    
+    <script>
+        const pen = ["cello","houser","pilot","trimax"]
+
+        
+        document.getElementById('pn').innerHTML = pen.includes ("pilot");
+    </script>
+    20<!-- adding new variable -->
+    <p id="var"></p>
+    <p id="f"></p>
+    <script>
+        let add  = "this is something which is too much wrong"
+        add += " + but there is no any other way to h=go out of this "
+        document.getElementById('var').innerHTML = add;
+        let f = 1;
+        let h =234;
+        let g = 23;
+        h||g;
+        
+        
+    f++;
+        document.getElementById('f').innerHTML = f >= 1;
+
+    </script>
+    <!-- e indicates to the 10 -->
+    <p id="e"></p>
+    <script>
+        let tene = 983e-7;
+        document.getElementById('e').innerHTML = tene;
+    </script>
+
+    <!-- numbers of variables can be decribe later at the printing point  -->
+    <p id="fun1"></p>
+    
+    <script>
+        function numbers(n1,n2) {
+            return n1 * n2;
+        }
+            // document.getElementById('fun').innerHTML = numbers(12,5);
+       
+    
+    </script>
+    <!-- numbers can also be defined before creating functions  -->
+    <p id="fun2"></p>
+    <script>
+        var fnc = mynew(43,90);
+    document.getElementById('fun2').innerHTML = fnc;
+    function mynew(f,n) {
+        return f-n;
+    }</script>
+    <!-- temperature from f˚ to c˚  -->
+    <p id="temp"></p>
+    <script>
+        function temperature(f) {
+            return (5/9)* (f-32);
+            
+            
+        }
+        document.getElementById('temp').innerHTML ="Temperature from f˚(102) to c˚ is\n" + temperature(102);
+
+    </script>
+    <!-- variable can only identify within the functions  -->
+    <p id="nerr"></p>
+    <script>
+        let neww = 12;
+        function ner() {
+            
+            document.getElementById('nerr').innerHTML = typeof neww +  "yes" +neww ;            
+        }
+        document.getElementById('nerr').innerHTML = typeof neww +  "no" +neww ;            
+       
+    </script>
+    <!-- use of "this"  -->
+    <p id="this"></p>
+    <script>
+const t = {first:"<b>never\t</b>",last:"give\tup", 
+    fullname: function() {
+        return this.first + this.last;
+    }
+};
+    document.getElementById('this').innerHTML = t.fullname();
+    </script>
+    <!-- this changes the button but <><><><>  direct printing print in seperate line or below -->
+    <p id="th"></p>
+    <button type="button" onclick="this.innerHTML = date()">this is the date </button>
+
+<button onmouseover="documnet.getElementById('dir').innerHTML = Date()">time</button>
+<p id="dir"></p>
+
+<!-- Two object and strign and others never be same by crossly they are equal  -->
+<p id="true"></p>
+<script>
+    let x1  = "my name";
+    let y  = new String("my name");
+    document.getElementById('true').innerHTML = (x1==y);
+    
+</script>
+<!-- <p id="demo"></p>
+
+<script>
+let str = "Apple, Banana, Kiwi";
+document.getElementById("demo").innerHTML = str.slice(2,13); 
+</script> -->
+<!-- slice refers to the (start and the end), (end to start)  -->
+<p id="slc"></p>
+<p id="slc2"></p>
+<script>
+    let kuch = "one, two, three";
+    document.getElementById('slc').innerHTML = kuch.slice(10, 15)
+    // end to start 
+    let bhi = "four, five, six"
+    document.getElementById('slc2').innerHTML = bhi.slice(-9,-5)
+</script>
+<!-- after the slice number or minus numbers are counted     -->
+<p id="num"></p>
+<script>
+    let plus = "ajban, aisbfi, oasbfajs"
+    document.getElementById('num').innerHTML = plus.slice(7);
+
+</script>
+<!-- 
+<p id="num2"></p>
+<script>
+    let plus = "ajban, aisbfi, oasbfajs"
+    document.getElementById('num2').innerHTML = plus.slice(7); -->
+   <p id="txt">my name is ankit</p>
+   <button type="button" onclick="mynew()">name changer</button>
+   <script>
+       function mynew() {
+        let str = document.getElementById('txt').innerHTML;
+       document.getElementById('txt').innerHTML = str.replace("ankit", "akash")
+       }
+   </script>
+   <!-- //<><><><><><><><><><><><><><><><><> -->
+   <button onclick="myFunction()">Try it</button>
+
+   <p id="demo">Hello World!</p>
+   
+   <script>
+   function myFunction() {
+     let text = document.getElementById("demo").innerHTML;
+     document.getElementById("demo").innerHTML =
+     text.toUpperCase();
+   }
+   </script>
+
+<!-- <><><><><><><><><><><><><><><><><><><><><><><><><>><><><><><><<><> -->
+
+   <!-- <p id="upper">Here is nothing but something</p>
+   <button  onclick="upr()">click</button>
+   <script>
+       function upr() {
+let str = document.getElementById("upper").innerHTML;
+           document.getElementById("upper").innerHTML = str.toUpperCase;
+       }
+   </script> -->
+   <!-- to add numbers by defineing how much times -->
+   <p id="neno"></p>
+   <script>
+       var text = "here";
+       document.getElementById("neno").innerHTML = text.charAt(0);
+   </script>
+   <p id="never"></p>
+   <button onclick="intel()">click</button>
+
+</script>
+<p id="next"></p>
+<script id="next" src="/Users/tushar/Desktop/HTML PROJECTS/nexter/javascipt.js"></script>
+<!-- array list words changes  -->
+<p id="array"></p>
+<script>
+    const arr =  new Array("bike", "car", "train", "bus");
+    arr[1] = "truck";
+    document.getElementById('array').innerHTML = arr;
+</script>
+<button type="button" onclick="warn()">warning</button>
+</script>
+<!-- change sign in array list -->
+<!-- <p id="change"></p>
+<script>
+    const phones =["Apple","Xiaomi","Oppo","Oneplus","Vivo"];
+    document.getElementById('change').innerHTML = phones.charger("*");
+</script> -->
+
+</body>
+<script src="/Users/tushar/Desktop/HTML PROJECTS/nexter/javascipt.js"></script>
+<script>
+    // alert("me");
+</script>
+<p id="randomally"></p>
+<button onclick="random()">try</button>
+<script>
+     const point = [1,78,445,8900,32,0];
+  
+  document.getElementById('randomally').innerHTML = point;
+  function random() {
+
+point.sort(function(a,b){return 0.3-Math.random()} );
+document.getElementById('randomally').innerHTML = point;
+}
+
+</script>
+<p id="timmme"></p>
+<script>
+    const tai = new Date(199999999999);
+    document.getElementById('timmme').innerHTML = tai;
+</script>
+<!-- <p id="sum"></p>
+<script>
+    const kot = [12,32,54,65,1,7];
+    const sum2 = kot.map(sumition);
+
+    document.getElementById("sum").innerHTML = sum2;
+
+    function sumition(total,value,index,array) {
+        return total+value;
+    } 
+</script> -->
+<p id="united"></p>
+<script>
+    let utc = new Date();
+    document.getElementById('united').innerHTML = utc.toUTCString();
+</script>
+<!-- to count microsecond form the date 1 jan 1970  -->
+<p id="miles"></p>
+<script>
+    let msec = Date.parse(2022-2-11);
+    document.getElementById('miles').innerHTML = msec;
+</script>
+<p id="modify"></p>
+<script>
+    const months = ["jan","feb","Mar","apr","may","june"];
+    const date =  new Date();
+ let month2 = months[date.getMonth()];
+  document.getElementById('modify').innerHTML = month2;
+</script>
+<!-- to print the form 1 to 10 not only betwee -->
+<p id="floor"></p>
+<script>
+    // +1 add the multiplied number inthe random list 
+document.getElementById('floor').innerHTML = Math.floor(Math.random()*10+1) 
+</script>
+
+<p id="minmax"></p>
+<button onclick=   "document.getElementById('minmax').innerHTML = merafunction(12,89)" >try here</button>
+<script>
+    function merafunction(min,max) {
+        // amx min represent as10 oflast command &&&& +1 is to add the multiplies number //
+    return Math.floor(Math.random()*(max-min+4)+1);
+        
+    }
+    
+</script>
+<!-- if else comparision  -->
+<br> <br> <hr>
+<input type="text" id="add" value="Enter your age here">
+<br> <br>
+<button onclick="dusra()">check here</button>
+<script>
+function dusra() {
+    let vote = document.getElementById('add').value;
+    if (vote<18) {
+        document.write("unable to vote");
+    } 
+    if (isNaN(add)){
+document.write("please enter the valid details");
+    }
+    else {
+        document.write("able to vote");
+        
+    }
+    
+}
+</script>
+<p id="greet"></p>
+<script>
+    let pop ;
+    let hours = new Date().getHours;
+    if (hours<10) {
+        pop  = "good morning";
+    }
+    else if(hours<20){
+pop = "good evening";
+    }
+    else {
+        pop = "good night";
+    }
+    document.getElementById('greet').innerHTML = pop;
+</script>
+
+<p id="white"></p>
+<script>
+    let sadan = ["bike","car","truck","bus"]
+    let print =  "";
+    for (let i = 0; i < array.length; i++) {
+     print += sadan[i];  
+    }
+    // console.log(print);
+document.getElementById('white').innerHTML = print;
+</script>
+<p id="noting"></p>
+<script>
+    const lets = [43,4,65,87,12,0,1,7,12,6,34,5];
+    let wordss = "";
+    for (const x in lets ) {
+        wordss += x;
+    }
+</script>
+</html>

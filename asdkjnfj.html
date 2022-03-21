@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p id="mine"></p>
+    <script>
+        const demo = [12, 342, , 543, , 1, 12, 4, 2, 1, 1, 13];
+        let nine = "";
+        for (const x in demo) {
+            nine += demo[x] + "<br>";
+            // x.split(",");
+        }
+        document.getElementById('mine').innerHTML = nine;
+    </script>
+    <hr>
+    <p id="second"></p>
+    <script>
+        const fun = [12, 32, 43, 5, 45, 12];
+        let txt2 = "";
+        fun.forEach(myfunction1);
+        document.getElementById('second').innerHTML = txt2 + "<br>";
+        function myfunction1(value, index, array) {
+            txt2 += value + "<br>";
+
+        }
+// print words down each other
+    </script>
+    <p id="third"></p>
+    <script>
+        const fun2 = "etherium";
+        let txt3 = "";
+        for (const x of fun2) {
+            txt3 += x + "<br>";
+        }
+
+        document.getElementById('third').innerHTML = txt3;
+    </script>
+    <!-- do while concept -->
+    <p id="four"></p>
+    <script>
+        let txt4 = "";
+        let i = 0;
+        do {
+            txt4 += "<br> the number is" + i; i++;
+        } while (i < 12);
+        document.getElementById('four').innerHTML = txt4;
+    </script>
+    <!-- to break the loop at not equal digit or number  {break}/ and to continue use {continue} -->
+    <p id="five"></p>
+    <script>
+        let txt5 = "";
+        for (let a = 0; a < 10; a++) {
+            if (a === 3) { break; } {
+                txt5 += a + "<br>";
+                document.getElementById('five').innerHTML = txt5 + "<br>";
+            }
+
+        }
+    </script>
+    <!-- scond of breaking list  -->
+    <p id="six"></p>
+    <script>
+        const fun4 = ["come", "go", "now", "here", "there"];
+        let txt6 = "";
+        list: {
+            txt6 += fun4[0] + "<br>";
+            txt6 += fun4[2] + "<br>";
+            txt6 += fun4[3] + "<br>";
+            txt6 += fun4[1] + "<br>";
+            break list;
+            txt6 += fun4[4];
+        }
+        document.getElementById('six').innerHTML = txt6;
+    </script>
+    <p id="seven"></p>
+    <script>
+        const fun5 = new Map([["bike", 102], ["car", 130], ["truck", 200]]);
+        let txt7 = "";
+        for (const x of fun5) {
+            txt7 += x;
+
+        }
+        document.getElementById('seven').innerHTML = txt7;
+    </script>
+    <a href="#second">kuchbhi</a>
+    <p id="eight"></p>
+    <p id="nine"></p>
+    <script>
+        const fun6 = new Set(["ben", "ten", "dore", "mon"]);
+        fun6.add("shinchan");
+        document.getElementById('eight').innerHTML = fun6.size;
+        document.getElementById('nine').innerHTML = fun6.has("ten");
+    </script>
+    <!-- <><><><><><><><><><><><><><>MAP<><><><><><><><><><><><>><<> -->
+    <!-- .get() -->
+    <p id="ten"></p>
+    <p id="teno"></p>
+    <script>
+        // #first
+        const fun7 = new Map([["java", 100], ["python", 500], ["javascript", 300]]);
+        document.getElementById('ten').innerHTML = fun7.get("javascript");
+        // #second 
+        const fun77 = new Map();
+        fun77.set("java", 100);
+        fun77.set("python", 500);
+        fun77.set("javascript", 300);
+        document.getElementById('teno').innerHTML = fun77.get("python");
+    </script>
+    <!-- .Foreach() -->
+    <P id="one1"></P>
+    <script>
+        let txt8 = "";
+        const fun8 = new Map();
+        fun8.set("java", 100);
+        fun8.set("python", 500);
+        fun8.set("javascript", 300);
+        fun8.forEach(function myfunc2(key, value) {
+            txt8 += value + "=" + key + "<br>";
+        })
+        document.getElementById('one1').innerHTML = txt8;
+    </script>
+    <!-- .enteries() -->
+    <p id="one2"></p>
+    <script>
+        let txt9 = "";
+        const fun9 = new Map();
+        fun8.set("java", 100);
+        fun8.set("python", 500);
+        fun8.set("javascript", 300);
+        for (const x of fun8) {
+            txt9 += x;
+        }
+        document.getElementById('one2').innerHTML = txt9.ind;
+    </script>
+    <p id="one3"></p>
+    <script>
+        const color = ["blue", "green", "red", "orange", "yellow"];
+
+        function isArray(myArray) {
+            return myArray.constructor === Array;
+        }
+        document.getElementById('one3').innerHTML = isArray(color);
+    </script>
+    <P id="one4"></P>
+    <script>
+        let null1;
+        null1 = undefined;
+        document.getElementById('one4').innerHTML = null1;
+    </script>
+    <!-- null === undefined("false") -->
+    <!-- null == undifined ("true") -->
+    <P id="ONE5"></P>
+    <p id="one5.1"></p>
+    <p id="one5.2"></p>
+
+    <script>
+        // #number wala 
+        let num2 = "7413816121";
+        let txt10 = num2.match(/[1-3]/g);
+        document.getElementById('ONE5').innerHTML = txt10;
+        // #abcd wala to find alphabets or only ("one word")
+        let str2 = "this is the way out there";
+        let find1 = str2.match(/th/g);
+        document.getElementById('one5.1').innerHTML = find1;
+        // #abcd wala but two words wala 
+        let str3 = "new, old new,old ne,od,new,nn,old,new";
+        let txt11 = str3.match(/new|old/g);
+        document.getElementById('one5.2').innerHTML = txt11;
+    </script>
+    <p id="one6"></p>
+    <script>
+        let fun10 = "prepare for 1000%";
+        let txt12 = fun10.match(/\d/g);
+        document.getElementById('one6').innerHTML = txt12;
+    </script>
+    <!-- to find out position  -->
+    <p id="one7"></p>
+    <script>
+        let fun11 = "HELLO THERE";
+        let txt13 = fun11.search(/\bTH/);
+        document.getElementById('one7').innerHTML = txt13;
+    </script>
+    <!-- to find the alphabet  -->
+    <p>ther is the test()</p>
+    <input type="text" id="inp">
+    <output form="inp"> </output>
+    <button type="button" onclick="func3">hey</button>
+    <script>
+        function func3() {
+            let x = 12;
+            const y = ["one", "two", "three", "four", "five"];
+            console.log(x * y);
+        }
+    </script>
+    <hr>
+    <br>
+    <input type="text" id="int1" placeholder="enter your age">
+    <br>
+    <button onclick="func4()">try here</button>
+    <h2 id="one8"></h2>
+    <script>
+        function func4() {
+            const input = document.getElementById('one8');
+            input.innerHTML = "";
+
+            let i = document.getElementById('int1').value;
+            try {
+                if (i == "") throw "empty";
+                if (i < 10) throw + " very low";
+                if (i < 15) throw "  low";
+                if (i > 25) throw "high";
+                if (isNaN(i)) throw "age is not a number";
+
+            } catch (error) {
+                input.innerHTML = "input is " + error;
+            }
+
+        }
+    </script>
+    <p id="one9"></p>
+    <p id="one91"></p>
+    <script>
+        let fun13 = 1.12;
+        try {
+         fun13.toPrecision(10);
+
+        } catch (error) {
+            document.getElementById('one9').innerHTML = error.name;
+        }
+        let x =  10;
+        try {
+            let x = y +1;
+
+        } catch (error) {
+            document.getElementById('one91').innerHTML = error.name;
+        }
+    </script>
+    <p><b>carName</b> is undefined outside myFunction():</p>
+
+    <p id="demo1"></p>
+    
+    <p id="demo2"></p>
+    
+    <script>
+    myFunction();
+    
+    function myFunction() {
+      let carName = "Volvo";
+      document.getElementById("demo1").innerHTML = typeof carName + " " + carName;
+    }
+    
+    document.getElementById("demo2").innerHTML = typeof carName;
+    </script>
+    <hr>
+    <p id="one10"></p>
+    <p id="one101"></p>
+    <p id="one102"></p>
+    <script>
+        func5();
+        document.getElementById('one10').innerHTML = myname;
+        function func5() {
+            myname = "sauske";
+
+        }
+        func6();
+        document.getElementById('one101').innerHTML = myname1;
+        function func6() {
+           let myname1 = "sauske";
+
+        }
+        func7();
+        var myname2 = "sauske";
+        document.getElementById('one102').innerHTML = myname2;
+        function func7() {
+            
+
+        }
+    </script>
+    <!-- elementory  -->
+    <p id="one11"></p>
+    <p id="one111"></p>
+    <script>
+        // # first 
+        elem= 5;
+        Element = document.getElementById('one11');
+        Element.innerHTML = elem;
+        var elem;
+        // #second 
+var elem1 ;
+elem1 = 10;
+Element = document.getElementById('one111');
+Element.innerHTML = elem1;
+    </script>
+</body>
+
+</html>

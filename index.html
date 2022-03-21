@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trillo</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: rgb(228, 54, 106);
+            font-size: 15px;
+            height: 211vh;
+            color: #777;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+
+        .main {
+            background-color: #fff;
+            width: 94.2%;
+            height: 1300px;
+            margin: 20px;
+            margin-top: 100px;
+            margin-left: 40px;
+            box-shadow: rgba(0, 0, 0, 0.486) 0 10px 40px;
+            border: 1px solid transparent;
+        }
+
+        .page {
+            height: 94%;
+            margin-top: 81px;
+            margin-left: -1px;
+
+            width: 20%;
+            background-color: rgb(66, 66, 66);
+
+        }
+
+        .me {
+            text-align: center;
+            margin-left: 40px;
+            margin-top: 1160px;
+            position: absolute;
+            color: rgb(202, 200, 200);
+            font-size: 12px;
+        }
+
+        .logo {
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 4.5%;
+            height: 40px;
+            position: absolute;
+            background-image: url('img/logo.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .content {
+            background-color: rgba(245, 240, 240, 0.753);
+            width: 943px;
+            height: 950px;
+            margin-left: 234px;
+            position: absolute;
+            margin-top: 351px;
+        }
+
+        .img1 {
+
+            width: 314px;
+            height: 200px;
+            margin-top: 81px;
+            margin-left: 233px;
+            position: absolute;
+            background-image: url('img/hotel-1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .img2 {
+
+
+            width: 316px;
+            height: 200px;
+            margin-top: 81px;
+            margin-left: 547px;
+            position: absolute;
+            background-image: url('img/hotel-2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .img3 {
+
+
+            width: 313px;
+            height: 200px;
+            margin-top: 81px;
+            margin-left: 863px;
+            position: absolute;
+            background-image: url('img/hotel-3.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .msg1 {
+            flex: content;
+            border-radius: 100px;
+            background-color: red;
+            width: 20px;
+            height: 20px;
+            align-items: flex-start;
+            text-align: center;
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 40px;
+            color: #fff;
+        }
+
+        .msg2 {
+            color: #fff;
+            flex: content;
+            border-radius: 100px;
+            background-color: red;
+            width: 20px;
+            height: 20px;
+            align-items: flex-start;
+            text-align: center;
+            position: absolute;
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+
+        .msg {
+            background-color: #fff;
+            width: 65px;
+            height: 75px;
+            float: left;
+            position: absolute;
+            margin-left: 915px;
+        }
+
+        .msg:hover {
+            background-color: rgb(247, 245, 245);
+        }
+
+        .a-msg {
+            background-color: #fff;
+            width: 65px;
+            height: 75px;
+            float: left;
+            position: absolute;
+            margin-left: 980px;
+        }
+
+        .a-msg:hover {
+            background-color: rgb(247, 245, 245);
+        }
+
+        .profile {
+            width: 125px;
+            height: 75px;
+            position: absolute;
+            margin-left: 1050px;
+        }
+
+        .profile:hover {
+            background-color: rgb(247, 245, 245);
+        }
+
+        .p-img {
+            width: 40px;
+            margin-top: 15px;
+            margin-left: 5px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 100px;
+            background-image: url('img/user.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .jonas {
+            margin-top: -30px;
+            position: absolute;
+            margin-left: 70px;
+            font-size: 20px;
+        }
+
+        .name {
+            position: absolute;
+            font-size: 28px;
+            font-weight: lighter;
+            margin-left: 260px;
+            margin-top: 300px;
+        }
+
+        .location {
+            position: absolute;
+            position: absolute;
+            font-size: 13px;
+            font-weight: lighter;
+            margin-left: 940px;
+            margin-top: 300px;
+            color: red;
+
+        }
+
+        .location:hover {
+            color: black;
+        }
+
+        .bookmark {
+            position: absolute;
+            margin-left: 30px;
+            margin-top: 18px;
+
+        }
+
+        .hotel {
+            background-color: rgb(228, 54, 106);
+            position: absolute;
+            width: 233px;
+            height: 60px;
+            text-align: center;
+        }
+
+        .hotel-link {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: lighter;
+            color: #fff;
+        }
+
+        .hotel-img {
+            height: 18px;
+            margin-right: 25px;
+            margin-top: 16px;
+            color: #fff;
+            margin-left: -65px;
+        }
+
+        .hotel:hover {
+            background-color: rgb(228, 54, 106);
+        }
+
+        .flight {
+            background-color: rgb(66, 66, 66);
+            position: absolute;
+            width: 233px;
+            height: 60px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .flight-link {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: lighter;
+            color: #fff;
+        }
+
+        .flight-img {
+            height: 20px;
+            margin-right: 25px;
+            margin-top: 16px;
+            color: #fff;
+            margin-left: -60px;
+        }
+
+        .flight:hover {
+            background-color: rgb(228, 54, 106);
+        }
+
+        .key {
+            background-color: rgb(66, 66, 66);
+            position: absolute;
+            width: 233px;
+            height: 60px;
+            text-align: center;
+            margin-top: 120px;
+        }
+
+        .key-link {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: lighter;
+            color: #fff;
+        }
+
+        .key-img {
+            height: 20px;
+            margin-right: 25px;
+            margin-top: 16px;
+            color: #fff;
+            margin-left: -35px;
+        }
+
+        .key:hover {
+            background-color: rgb(228, 54, 106);
+        }
+
+        .tour {
+            background-color: rgb(66, 66, 66);
+            position: absolute;
+            width: 233px;
+            height: 60px;
+            text-align: center;
+            margin-top: 180px;
+        }
+
+        .tour-link {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: lighter;
+            color: #fff;
+        }
+
+        .tour-img {
+            height: 20px;
+            margin-right: 25px;
+            margin-top: 16px;
+            color: #fff;
+            margin-left: -70px;
+        }
+
+        .tour::before {
+            height: 100%;
+            width: 3px;
+            transition: all 0;
+        }
+
+        .tour:hover {
+            background-color: rgb(228, 54, 106);
+        }
+
+        .loc {
+            position: absolute;
+            margin-left: -20px;
+            width: 15px;
+            height: 15px;
+        }
+
+        .msg-box {
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+
+        .votes {
+            position: absolute;
+            width: 80px;
+            height: 70px;
+            text-align: center;
+            margin-top: 20px;
+            background-color: rgb(228, 54, 106);
+            color: azure;
+            font-size: 20px;
+            font-weight: lighter;
+            margin-top: 280px;
+            margin-left: 1098px;
+        }
+
+        .vote-1 {
+
+            text-align: center;
+            margin-top: 0px;
+            font-weight: 700;
+            color: #fff;
+            font-size: 10px;
+            font-weight: lighter;
+            margin-top: 280px;
+        }
+
+        .para {
+            background-color: #fff;
+            width: 50%;
+            padding: 0px 20px;
+            height: 75%;
+            margin-top: 35px;
+            margin-left: 40px;
+            box-shadow: rgba(119, 119, 119, 0.137) 0 10px 40px;
+        }
+
+        .comman {
+            width: 15px;
+            height: 15px;
+        }
+
+        .nick {
+            width: 20%;
+            margin-top: 35px;
+            height: 31%;
+            background-color: #fff;
+            position: absolute;
+
+            margin-left: 650px;
+            box-shadow: rgba(119, 119, 119, 0.103) 0 10px 40px;
+        }
+
+        .marry {
+            width: 20%;
+            margin-top: 400px;
+            height: 31%;
+            background-color: #fff;
+            position: absolute;
+
+            margin-left: 650px;
+            box-shadow: rgba(119, 119, 119, 0.103) 0 10px 40px;
+        }
+
+        .main-review {
+            font-size: 14px;
+            line-height: 23px;
+            position: absolute;
+
+            margin-top: 10px;
+        }
+
+        .main-review2 {
+            font-size: 14px;
+            line-height: 23px;
+            position: absolute;
+
+            margin-top: 90px;
+        }
+
+        .hr1 {
+            /* position: absolute; */
+            margin-top: 160px;
+            opacity: 0.1;
+
+        }
+
+        .detail-1 {
+            line-height: 28px;
+            font-size: 14px;
+            position: absolute;
+            margin-left: 20px;
+
+        }
+
+        .detail-2 {
+            line-height: 28px;
+            font-size: 14px;
+            position: absolute;
+            margin-left: 270px;
+
+        }
+
+        .main-review3 {
+            font-size: 13px;
+            margin-top: 40px;
+            margin-left: 0px;
+            position: absolute;
+            color: #777;
+
+        }
+
+        .face1 {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            background-image: url('img/user-1.jpg');
+            float: left;
+            margin-left: 300px;
+            position: absolute;
+            margin-top: 18px;
+            border: 3px solid #fff;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .face2 {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            background-image: url('img/user-2.jpg');
+            float: left;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left: 340px;
+            margin-top: 18px;
+            border: 3px solid #fff;
+        }
+
+        .face3 {
+            width: 50px;
+            float: left;
+            height: 50px;
+            border-radius: 100px;
+            background-image: url('img/user-3.jpg');
+            position: absolute;
+            margin-left: 380px;
+            margin-top: 18px;
+            border: 3px solid #fff;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .face4 {
+            width: 50px;
+            float: left;
+            height: 50px;
+            border-radius: 100px;
+            background-image: url('img/user-4.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            margin-left: 420px;
+            margin-top: 18px;
+            border: 3px solid #fff;
+        }
+
+        .icon1::before {
+            content: "\201C";
+            font-size: 200px;
+            color: rgba(245, 240, 240, 0.753);
+            width: 40px;
+            position: absolute;
+            height: 40px;
+            font-family: sans-serif;
+            margin-top: -40px;
+            margin-left: -7px;
+        }
+
+        .review1 {
+            position: absolute;
+            line-height: 20px;
+            font-weight: 300;
+            font-size: 14px;
+            margin-top: 35px;
+            margin-left: 35px;
+        }
+
+        .nick-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            position: absolute;
+            background-image: url('img/user-5.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 200px;
+            margin-left: 10px;
+        }
+
+        .nicksmith {
+            margin-top: 190px;
+            margin-left: 75px;
+            line-height: 20px;
+            font-size: 12px;
+            position: absolute;
+        }
+
+        .date1 {
+            position: absolute;
+            font-weight: 200;
+            font-size: 10px;
+            margin-top: 240px;
+            margin-left: 77px;
+        }
+
+        .rate1 {
+            position: absolute;
+            color: rgb(228, 54, 106);
+            font-size: 30px;
+            font-weight: 200;
+            margin-top: 215px;
+            margin-left: 125px;
+        }
+
+        .marry-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            position: absolute;
+            background-image: url('img/user-6.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 200px;
+            margin-left: 10px;
+        }
+
+        .show {
+            position: absolute;
+            width: 70px;
+
+            font-size: 13px;
+            text-align: left;
+            color: rgb(228, 54, 106);
+
+            padding-right: -20px;
+            margin-top: 710px;
+            margin-left: 700px;
+            border-bottom: 1px solid rgb(228, 54, 106);
+        }
+
+        .show:hover {
+            border-bottom: 1px solid black;
+            width: 73px;
+            padding-bottom: 1px;
+            color: black;
+
+        }
+
+        .arrow {
+            margin-left: 1px;
+        }
+
+        .arrow:hover {
+            margin-left: 5px;
+
+        }
+
+        .last {
+            font-size: 30px;
+            font-weight: 200;
+            margin-left: 30px;
+            margin-top: 40px;
+            position: absolute;
+        }
+
+        .btn {
+            background-color: rgb(228, 54, 106);
+            padding: 8px 25px;
+            border-radius: 50px;
+            position: absolute;
+            margin-top: 110px;
+            margin-left: 420px;
+            transition: all .1s;
+            animation-name: moveinall;
+            animation-duration: .1s;
+        }
+        .btn:hover{
+            animation-name: bigsmall;
+            animation-duration: 4s;
+        }
+@keyframes bigsmall{
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.5);
+    }
+    40%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(1.5);
+    }
+    80%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+   
+}
+@keyframes moveinall {
+            0% {
+                opacity: 1;
+
+            }
+
+            50% {
+                opacity: 0.5;
+
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .book:active {
+            transform: translateY(-3px);
+            box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
+            z-index: -1;
+            transform: scale(1.7);
+            transition: all .2s;
+            opacity: 0;
+            animation-name: moveinal;
+            animation-duration: 1.3s;
+        }
+        .book {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 15px;
+            transition: all 1s;
+            transition: all .1s;
+            animation-name: moveinall;
+            animation-duration: .1s;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="img1"></div>
+        <div class="img2"></div>
+        <div class="img3"></div>
+        <span class="name">HOTEL LAS PALMAS</span>
+        <span class="link"><a href="#" class="location"> <img src="img/SVG/location-pin.svg" alt="" class="loc">
+                Albufeira Portugal</a></span>
+        <div class="votes">8.6 <span class="vote-1"><br>428 votes</span></div>
+        <div class="content">
+            <div class="nick"><span class="icon1"></span>
+                <span class="review1"> Lorem ipsum dolor <br> sit amet, consectetur <br> adipisicing elit. Fuga <br>
+                    doloremque <br> architecto dicta <br> animi, totam, itaque <br> officia ex.</span>
+                <div class="nick-img"></div>
+                <span class="nicksmith">NICK <br> SMITH</span>
+                <span class="rate1">7.8</span>
+                <span class="date1">Feb 23rd, <br>2017</span>
+            </div>
+            <div class="marry"><span class="icon1"></span>
+                <span class="review1"> Lorem ipsum dolor br sit amet, consectetur <br> adipisicing elit. Fuga <br>
+                    doloremque <br> architecto dicta <br> animi.</span>
+                <div class="marry-img"></div>
+                <span class="nicksmith">MARRY <br> THOMAS</span>
+                <span class="rate1">9.1</span>
+                <span class="date1">sep 13th, <br>2017</span>
+            </div>
+            <span class="show">Show all <span class="arrow">&rarr;</span></span>
+            <div class="para"><span class="main-review">Lorem ipsum dolor br sit amet, consectetur adipisicing elit.
+                    Animi
+                    nisi <br> dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas,<br> ut corporis
+                    incidunt deserunt quae architecto voluptate.</span>
+                <br> <span class="main-review2">Accusantium cumque, quas, ut corporis incidunt deserunt quae <br>
+                    architecto voluptate delectus, inventore iure aliquid aliquam.
+                </span>
+                <hr class="hr1">
+                <span class="detail-1">
+                    <img src="img/SVG/chevron-thin-right.svg" alt="" class="arrow">
+                    Close to he beach <br>
+                    <img src="img/SVG/chevron-thin-right.svg" alt="" class="arrow"> Free airport
+                    shuttle <br
+                    ><img src="img/SVG/chevron-thin-right.svg" alt="" class="arrow"> Air conditioning
+                    and heating <br>
+                    <img src="img/SVG/chevron-thin-right.svg" alt="" class="arrow"> We speak all
+                    languages</span>
+                    <span class="detail-2">
+                        <img src="img/SVG/chevron-thin-right.svg" alt=""
+                        class="arrow"> Breakfast including <br>
+                        <img src="img/SVG/chevron-thin-right.svg" alt=""
+                        class="arrow"> Free
+                    wifi in all room <br>
+                    <img src="img/SVG/chevron-thin-right.svg" alt="" class="arrow"> Pets allowed
+                    <br>
+                    <img src="img/SVG/chevron-thin-right.svg" alt="" class="arrow"> Perfect for family </span>
+                <hr class="hr1"><span class="main-review3">Lucy and 3 other friends recommend this hotel.</span>
+                <div class="face1"></div>
+                <div class="face2"></div>
+                <div class="face3"></div>
+                <div class="face4"></div>
+
+            </div>
+            <span class="last">GOOD NEWS! WE HAVE 4 FREE ROOMS FOR YOUR SELECTED DATES!</span>
+            <span class="btn"><a href="#" class="book">BOOK NOW</a></span>
+        </div>
+        <div class="logo"></div>
+        <div class="msg">
+            <img src="img/SVG/bookmark.svg" alt="" class="bookmark">
+            <div class="msg1"> 7</div>
+        </div>
+        <div class="a-msg">
+            <img src="img/SVG/chat.svg" alt="" class="msg-box">
+            <div class="msg2">13</div>
+        </div>
+        <div class="profile">
+            <div class="p-img"></div><span class="jonas">Jonas</span>
+        </div>
+        <div class="page">
+            <span class="hotel"><a href="#" class="hotel-link"><img src="img/SVG/home.svg" alt=""
+                        class="hotel-img">HOTEL</a></span>
+            <span class="flight"><a href="#" class="flight-link"><img src="img/SVG/aircraft-take-off.svg" alt=""
+                        class="flight-img">FLIGHTL</a></span>
+            <span class="key"><a href="#" class="key-link"><img src="img/SVG/key.svg" alt="" class="key-img">CAR
+                    RENTAL</a></span>
+            <span class="tour"><a href="#" class="tour-link"><img src="img/SVG/map.svg" alt=""
+                        class="tour-img">TOURS</a></span>
+            <span class="me"><img src="img/SVG/creative-commons.svg" alt="" class="comman"> 2017 by trillo. All rights
+                <br> reserved.</span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
